@@ -1,0 +1,118 @@
+#include <iostream>
+#include <string.h>
+using namespace std;
+
+
+int i,j,a=1,b=1;
+const int size=5;
+struct mahasiswa{
+	char nama[50];
+	double nim;
+	
+}mhs[7];
+
+struct nilaiSemua{
+	double orkom, jarkom, so, basisdata, pbo;
+}nilai[5];
+
+data(){
+	cout<<"\t\t\t ================================\n";
+	cout<<"\t\t\t Nama      : SIGNORY UMBU BEWA GOETI\n";
+	cout<<"\t\t\t NIM       : 5140411367\n";
+	cout<<"\t\t\t Jurusan   : Teknik lnformatika \n";
+	cout<<"\t\t\t ================================\n";
+}
+
+label(){
+	cout<<" ==============================================================================\n";
+}
+
+label1(){
+	cout<<" --------------------------------------\n";
+}
+
+
+input(){
+     //clrscr;
+	 cout<<" BANYAK NYA DATA : ? = ";cin>>j;
+	 cout << endl;
+	 //clrscr;
+	 for(i=1;i<=j;i++){
+	    cout<<" Data Mahasiswa ke- "<<b++<<endl;
+	    cout<<" masukkan NIM\t : ";
+	    cin>>mhs[i].nim;
+	    cout<<" masukkan Nama\t : ";
+	    cin>>mhs[i].nama;
+	     cout << endl;
+	    
+	    cout<<" ORKOM : ";
+	    cin>>nilai[i].orkom;
+	    
+	    cout<<" JARKOM : ";
+	    cin>>nilai[i].jarkom;
+	    
+	    cout<<" SO : ";
+	    cin>>nilai[i].so;
+	    
+	    cout<<" BASIS DATA : ";
+	    cin>>nilai[i].basisdata;
+
+	    cout<<" PBO : ";
+	    cin>>nilai[i].pbo;
+	   
+	    cout << endl;
+	    label1();
+	 }
+	
+}
+
+output(){
+	label();
+	cout<<"\t\t\t DATA MAHASISWA "<<endl;
+	label();
+
+	for(i=1;i<=j;i++){
+	   	cout<<"Nomer("<<a++<<")  ";
+	    cout<<"NIM : "<<mhs[i].nim;
+	    cout<<"  NAMA : "<<mhs[i].nama<<endl;
+	    
+	    cout<<"ORKOM      = "<<nilai[i].orkom<<endl;
+	    cout<<"JARKOM     = "<<nilai[i].jarkom<<endl;
+	    cout<<"SO         = "<<nilai[i].so<<endl;
+	    cout<<"BASIS DATA = "<<nilai[i].basisdata<<endl;
+	    cout<<"PBO        = "<<nilai[i].pbo<<endl;
+	    label();
+   }
+}
+
+int main(){
+	awal:
+	data();
+	
+	label();
+	
+	input();
+
+	output();
+	
+
+
+	cout<<"\n"  ;
+	label1();
+	cout<<"\n Apakah Anda Ingin Mengulang [Y/N] ? "  ;
+	
+	char m ;
+	cin>>m;
+	if (m == 'y')
+	{
+		goto awal;
+	}else if (m == 'n'){
+		goto akhir;
+	}
+	
+	akhir:
+	label1();
+
+	//getch();
+	
+}
